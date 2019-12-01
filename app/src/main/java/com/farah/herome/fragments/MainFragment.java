@@ -1,6 +1,7 @@
 package com.farah.herome.fragments;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.farah.herome.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +28,10 @@ public class MainFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private Button cameByAccidentButton;
+    private Button geneticMutationButton;
+    private Button bornWithThemButton;
+    private Button choosePowersButton;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -66,14 +74,23 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view  = inflater.inflate(R.layout.fragment_main, container, false);
+        List<Button> buttons = new ArrayList<>();
 
-        Button cameByAccidentButton = view.findViewById(R.id.came_by_accident_button);
-        Button geneticMutationButton = view.findViewById(R.id.genetic_mutation_button);
-        Button bornWithThemButton = view.findViewById(R.id.born_with_them_button);
-        Button choosePowersButton = view.findViewById(R.id.choose_powers_button);
+        cameByAccidentButton = view.findViewById(R.id.came_by_accident_button);
+        geneticMutationButton = view.findViewById(R.id.genetic_mutation_button);
+        bornWithThemButton = view.findViewById(R.id.born_with_them_button);
+        choosePowersButton = view.findViewById(R.id.choose_powers_button);
 
         choosePowersButton.setEnabled(false);
         choosePowersButton.getBackground().setAlpha(128);
+
+        buttons.add(cameByAccidentButton);
+        buttons.add(geneticMutationButton);
+        buttons.add(bornWithThemButton);
+
+
+        setOnClickListeners(buttons);
+
         // Inflate the layout for this fragment
         return view;
     }
@@ -115,5 +132,41 @@ public class MainFragment extends Fragment {
     public interface MainFragmentInteractionListener {
         // TODO: Update argument type and name
         void MainFragmentInteraction(Uri uri);
+    }
+
+    private void setOnClickListeners(final List<Button> buttons) {
+        for (final Button button : buttons) {
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View buttonClicked) {
+                    if (buttonClicked == cameByAccidentButton) {
+                        cameByAccidentButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.lightning, 0, R.drawable.item_selected, 0);
+                        resetButtonCheckmark(buttons, R.drawable.lightning);
+                    } else if (buttonClicked == geneticMutationButton) {
+                        geneticMutationButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.atomic, 0, R.drawable.item_selected, 0);
+                        resetButtonCheckmark(buttons, R.drawable.atomic);
+                    } else if (buttonClicked == bornWithThemButton) {
+                        bornWithThemButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.rocket, 0, R.drawable.item_selected, 0);
+                        resetButtonCheckmark(buttons, R.drawable.rocket);
+                    }
+                }
+            });
+        }
+        choosePowersButton.setEnabled(true);
+        choosePowersButton.getBackground().setAlpha(255);
+    }
+
+    private void resetButtonCheckmark(List<Button> buttons, int leftDrawable) {
+        Drawable[] buttonDrawables = new Drawable[4];
+        for (Button button : buttons) {
+            if (button.isPressed()) {
+               buttonDrawables = button.getCompoundDrawables();
+            }
+            if (buttonDrawables[2] == null) {
+                button.setCompoundDrawablesWithIntrinsicBounds(leftDrawable, 0, R.drawable.item_selected, 0);
+            } else {
+                button.setCompoundDrawablesWithIntrinsicBounds(leftDrawable, 0, 0, 0);
+            }
+        }
     }
 }
