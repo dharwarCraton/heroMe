@@ -154,19 +154,19 @@ public class MainFragment extends Fragment {
                     choosePowersButton.setEnabled(true);
                     choosePowersButton.getBackground().setAlpha(255);
                     if (button == cameByAccidentButton) {
-                        came_by_accident_button_checkmark.setImageResource(R.drawable.item_selected);
-                        genetic_mutation_button_checkmark.setImageResource(0);
-                        born_with_them_button_checkmark.setImageResource(0);
+                        came_by_accident_button_checkmark.setVisibility(VISIBLE);
+                        genetic_mutation_button_checkmark.setVisibility(GONE);
+                        born_with_them_button_checkmark.setVisibility(GONE);
                     }
                     if (button == geneticMutationButton) {
-                        came_by_accident_button_checkmark.setImageResource(0);
-                        genetic_mutation_button_checkmark.setImageResource(R.drawable.item_selected);
-                        born_with_them_button_checkmark.setImageResource(0);
+                        came_by_accident_button_checkmark.setVisibility(GONE);
+                        genetic_mutation_button_checkmark.setVisibility(VISIBLE);
+                        born_with_them_button_checkmark.setVisibility(GONE);
                     }
                     if (button == bornWithThemButton) {
-                        came_by_accident_button_checkmark.setImageResource(0);
-                        genetic_mutation_button_checkmark.setImageResource(0);
-                        born_with_them_button_checkmark.setImageResource(R.drawable.item_selected);
+                        came_by_accident_button_checkmark.setVisibility(GONE);
+                        genetic_mutation_button_checkmark.setVisibility(GONE);
+                        born_with_them_button_checkmark.setVisibility(VISIBLE);
                     }
                 }
             });

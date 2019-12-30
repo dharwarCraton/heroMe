@@ -63,10 +63,12 @@
 
             <ImageView
                 android:id="@+id/came_by_accident_button_checkmark"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_weight="0.5" />
+                android:layout_weight="0.5"
+                android:src="@drawable/item_selected"
+                android:visibility="invisible" />
         </LinearLayout>
 
         <LinearLayout
@@ -98,10 +100,12 @@
 
             <ImageView
                 android:id="@+id/genetic_mutation_button_checkmark"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_weight="0.5" />
+                android:layout_weight="0.5"
+                android:src="@drawable/item_selected"
+                android:visibility="invisible" />
         </LinearLayout>
 
         <LinearLayout
@@ -133,10 +137,12 @@
 
             <ImageView
                 android:id="@+id/born_with_them_button_checkmark"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_weight="0.5" />
+                android:layout_weight="0.5"
+                android:src="@drawable/item_selected"
+                android:visibility="invisible" />
         </LinearLayout>
 
         <Button
