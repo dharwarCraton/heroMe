@@ -1,11 +1,15 @@
 <resources>
     <string name="app_name">Hero Me</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="came_by_accident_btn_text">CAME BY ACCIDENT</string>
-    <string name="genetic_mutation_btn_text">GENETIC MUTATION</string>
-    <string name="born_with_them_btn_text">BORN WITH THEM</string>
+    <string name="came_by_accident_btn_text">Came by Accident</string>
+    <string name="genetic_mutation_btn_text">Genetic Mutation</string>
+    <string name="born_with_them_btn_text">Born with Them</string>
     <string name="choose_powers">Choose Powers</string>
-    <string name="pick_a_power_title">PICK A POWER</string>
+    <string name="pick_a_power_title">Pick a Power</string>
+    <string name="turtle_power_text">Turtle Power</string>
+    <string name="lightning_text">Lightning</string>
+    <string name="flight_text">Flight</string>
+    <string name="web_slinging_text">Web Slinging</string>
+    <string name="laser_vision_text">Laser Vision</string>
+    <string name="super_strength_text">Super Strength</string>
+    <string name="show_backstory_text">Show Backstory</string>
 </resources>

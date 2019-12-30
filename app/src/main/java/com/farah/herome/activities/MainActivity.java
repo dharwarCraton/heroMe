@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
 
     public void loadPickPowerFragment() {
         PickPowerFragment pickPowerFragment = new PickPowerFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, pickPowerFragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, pickPowerFragment).addToBackStack(null).commit();
     }
 
     @Override

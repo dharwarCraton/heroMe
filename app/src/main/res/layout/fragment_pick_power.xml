@@ -8,17 +8,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/hero_bg_gradient">
+        android:background="@drawable/hero_bg_gradient"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/pick_a_power_title"
-            android:gravity="center"/>
+            android:textAllCaps="true"
+            android:textColor="#FAC740"
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <LinearLayout
-            android:id="@+id/came_by_accident_button"
+            android:id="@+id/turtle_power_button"
             android:layout_width="300dp"
             android:layout_height="55dp"
             android:layout_marginTop="15dp"
@@ -33,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="0.5"
-                android:src="@drawable/lightning" />
+                android:src="@drawable/turtle_power" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -41,17 +46,213 @@
                 android:layout_gravity="center"
                 android:layout_weight="2"
                 android:gravity="center"
-                android:text="@string/came_by_accident_btn_text"
-                android:textColor="#FAC740" />
+                android:text="@string/turtle_power_text"
+                android:textColor="#FAC740"
+                android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/came_by_accident_button_checkmark"
+                android:id="@+id/turtle_power_button_checkmark"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_weight="0.5" />
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/lightning_button"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/hero_button"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="15dp"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/thors_hammer" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/lightning_text"
+                android:textColor="#FAC740"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/lightning_button_checkmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/flight_button"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/hero_button"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="15dp"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/super_man_crest" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/flight_text"
+                android:textColor="#FAC740"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/flight_button_checkmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/web_slinging_button"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/hero_button"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="15dp"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/spider_web" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/web_slinging_text"
+                android:textColor="#FAC740"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/web_slinging_button_checkmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/laser_vision_button"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/hero_button"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="15dp"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/laser_vision" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/laser_vision_text"
+                android:textColor="#FAC740"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/laser_vision_button_checkmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/super_strength_button"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/hero_button"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="15dp"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/super_strength" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/super_strength_text"
+                android:textColor="#FAC740"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/super_strength_button_checkmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/choose_powers_button"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/hero_solid_button"
+            android:gravity="center"
+            android:paddingStart="10dp"
+            android:paddingEnd="15dp"
+            android:text="@string/show_backstory_text"
+            android:textAllCaps="true"
+            android:textColor="#10161D"
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>

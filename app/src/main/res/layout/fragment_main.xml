@@ -16,7 +16,6 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
             app:srcCompat="@drawable/heroes" />
 
         <LinearLayout
@@ -44,7 +43,9 @@
                 android:layout_weight="2"
                 android:gravity="center"
                 android:text="@string/came_by_accident_btn_text"
-                android:textColor="#FAC740" />
+                android:textAllCaps="true"
+                android:textColor="#FAC740"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/came_by_accident_button_checkmark"
@@ -79,7 +80,9 @@
                 android:layout_weight="2"
                 android:gravity="center"
                 android:text="@string/genetic_mutation_btn_text"
-                android:textColor="#FAC740" />
+                android:textAllCaps="true"
+                android:textColor="#FAC740"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/genetic_mutation_button_checkmark"
@@ -114,7 +117,9 @@
                 android:layout_weight="2"
                 android:gravity="center"
                 android:text="@string/born_with_them_btn_text"
-                android:textColor="#FAC740" />
+                android:textAllCaps="true"
+                android:textColor="#FAC740"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/born_with_them_button_checkmark"
@@ -136,7 +141,8 @@
             android:paddingEnd="15dp"
             android:text="@string/choose_powers"
             android:textColor="#10161D"
-            android:textSize="22sp" />
+            android:textSize="22sp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
