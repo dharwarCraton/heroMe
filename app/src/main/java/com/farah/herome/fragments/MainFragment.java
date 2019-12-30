@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.farah.herome.R;
+import com.farah.herome.activities.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -99,6 +100,14 @@ public class MainFragment extends Fragment {
         buttons.add(bornWithThemButton);
 
         setOnClickListeners(buttons);
+
+        choosePowersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity mainActivity = (MainActivity) getActivity();
+                mainActivity.loadPickPowerFragment();
+            }
+        });
 
         choosePowersButton.setEnabled(false);
         choosePowersButton.getBackground().setAlpha(128);

@@ -27,6 +27,10 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
 
     }
 
+    public void loadPickPowerFragment() {
+
+    }
+
     @Override
     public void MainFragmentInteraction(Uri uri) {
 
