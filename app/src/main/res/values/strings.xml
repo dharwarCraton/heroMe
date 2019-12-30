@@ -3,4 +3,8 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="came_by_accident_btn_text">CAME BY ACCIDENT</string>
+    <string name="genetic_mutation_btn_text">GENETIC MUTATION</string>
+    <string name="born_with_them_btn_text">BORN WITH THEM</string>
+    <string name="choose_powers">Choose Powers</string>
 </resources>

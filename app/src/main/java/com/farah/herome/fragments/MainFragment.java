@@ -1,7 +1,6 @@
 package com.farah.herome.fragments;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,11 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.farah.herome.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static android.view.View.GONE;
+import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,10 +33,14 @@ public class MainFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private Button cameByAccidentButton;
-    private Button geneticMutationButton;
-    private Button bornWithThemButton;
+    private LinearLayout cameByAccidentButton;
+    private LinearLayout geneticMutationButton;
+    private LinearLayout bornWithThemButton;
     private Button choosePowersButton;
+
+    private ImageView came_by_accident_button_checkmark;
+    private ImageView genetic_mutation_button_checkmark;
+    private ImageView born_with_them_button_checkmark;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -74,22 +83,25 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view  = inflater.inflate(R.layout.fragment_main, container, false);
-        List<Button> buttons = new ArrayList<>();
+        List<LinearLayout> buttons = new ArrayList<>();
 
         cameByAccidentButton = view.findViewById(R.id.came_by_accident_button);
         geneticMutationButton = view.findViewById(R.id.genetic_mutation_button);
         bornWithThemButton = view.findViewById(R.id.born_with_them_button);
         choosePowersButton = view.findViewById(R.id.choose_powers_button);
 
-        choosePowersButton.setEnabled(false);
-        choosePowersButton.getBackground().setAlpha(128);
+        came_by_accident_button_checkmark = view.findViewById(R.id.came_by_accident_button_checkmark);
+        genetic_mutation_button_checkmark = view.findViewById(R.id.genetic_mutation_button_checkmark);
+        born_with_them_button_checkmark = view.findViewById(R.id.born_with_them_button_checkmark);
 
         buttons.add(cameByAccidentButton);
         buttons.add(geneticMutationButton);
         buttons.add(bornWithThemButton);
 
-
         setOnClickListeners(buttons);
+
+        choosePowersButton.setEnabled(false);
+        choosePowersButton.getBackground().setAlpha(128);
 
         // Inflate the layout for this fragment
         return view;
@@ -134,39 +146,30 @@ public class MainFragment extends Fragment {
         void MainFragmentInteraction(Uri uri);
     }
 
-    private void setOnClickListeners(final List<Button> buttons) {
-        for (final Button button : buttons) {
+    private void setOnClickListeners(final List<LinearLayout> buttons) {
+        for (final LinearLayout button : buttons) {
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View buttonClicked) {
-                    if (buttonClicked == cameByAccidentButton) {
-                        cameByAccidentButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.lightning, 0, R.drawable.item_selected, 0);
-                        resetButtonCheckmark(buttons, R.drawable.lightning);
-                    } else if (buttonClicked == geneticMutationButton) {
-                        geneticMutationButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.atomic, 0, R.drawable.item_selected, 0);
-                        resetButtonCheckmark(buttons, R.drawable.atomic);
-                    } else if (buttonClicked == bornWithThemButton) {
-                        bornWithThemButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.rocket, 0, R.drawable.item_selected, 0);
-                        resetButtonCheckmark(buttons, R.drawable.rocket);
+                    choosePowersButton.setEnabled(true);
+                    choosePowersButton.getBackground().setAlpha(255);
+                    if (button == cameByAccidentButton) {
+                        came_by_accident_button_checkmark.setImageResource(R.drawable.item_selected);
+                        genetic_mutation_button_checkmark.setImageResource(0);
+                        born_with_them_button_checkmark.setImageResource(0);
+                    }
+                    if (button == geneticMutationButton) {
+                        came_by_accident_button_checkmark.setImageResource(0);
+                        genetic_mutation_button_checkmark.setImageResource(R.drawable.item_selected);
+                        born_with_them_button_checkmark.setImageResource(0);
+                    }
+                    if (button == bornWithThemButton) {
+                        came_by_accident_button_checkmark.setImageResource(0);
+                        genetic_mutation_button_checkmark.setImageResource(0);
+                        born_with_them_button_checkmark.setImageResource(R.drawable.item_selected);
                     }
                 }
             });
-        }
-        choosePowersButton.setEnabled(true);
-        choosePowersButton.getBackground().setAlpha(255);
-    }
-
-    private void resetButtonCheckmark(List<Button> buttons, int leftDrawable) {
-        Drawable[] buttonDrawables = new Drawable[4];
-        for (Button button : buttons) {
-            if (button.isPressed()) {
-               buttonDrawables = button.getCompoundDrawables();
-            }
-            if (buttonDrawables[2] == null) {
-                button.setCompoundDrawablesWithIntrinsicBounds(leftDrawable, 0, R.drawable.item_selected, 0);
-            } else {
-                button.setCompoundDrawablesWithIntrinsicBounds(leftDrawable, 0, 0, 0);
-            }
         }
     }
 }

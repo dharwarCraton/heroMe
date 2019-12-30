@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/hero_bg_gradient"
+        android:gravity="center"
         android:orientation="vertical">
 
         <android.support.v7.widget.Toolbar
@@ -33,47 +34,110 @@
             android:layout_marginTop="15dp"
             app:srcCompat="@drawable/heroes" />
 
-        <Button
+        <LinearLayout
             android:id="@+id/came_by_accident_button"
             android:layout_width="300dp"
             android:layout_height="55dp"
-            android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:background="@drawable/hero_button"
-            android:drawableStart="@drawable/lightning"
-            android:gravity="center"
+            android:orientation="horizontal"
             android:paddingStart="10dp"
             android:paddingEnd="15dp"
-            android:text="Came by accident"
-            android:textColor="#FAC740" />
+            android:weightSum="3">
 
-        <Button
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/lightning" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/came_by_accident_btn_text"
+                android:textColor="#FAC740" />
+
+            <ImageView
+                android:id="@+id/came_by_accident_button_checkmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/genetic_mutation_button"
             android:layout_width="300dp"
             android:layout_height="55dp"
-            android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:background="@drawable/hero_button"
-            android:drawableStart="@drawable/atomic"
-            android:gravity="center"
+            android:orientation="horizontal"
             android:paddingStart="10dp"
             android:paddingEnd="15dp"
-            android:text="Genetic mutation"
-            android:textColor="#FAC740" />
+            android:weightSum="3">
 
-        <Button
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/atomic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/genetic_mutation_btn_text"
+                android:textColor="#FAC740" />
+
+            <ImageView
+                android:id="@+id/genetic_mutation_button_checkmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/born_with_them_button"
             android:layout_width="300dp"
             android:layout_height="55dp"
-            android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:background="@drawable/hero_button"
-            android:drawableStart="@drawable/rocket"
-            android:gravity="center"
+            android:orientation="horizontal"
             android:paddingStart="10dp"
             android:paddingEnd="15dp"
-            android:text="Born with them"
-            android:textColor="#FAC740" />
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/rocket" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/born_with_them_btn_text"
+                android:textColor="#FAC740" />
+
+            <ImageView
+                android:id="@+id/born_with_them_button_checkmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5" />
+        </LinearLayout>
 
         <Button
             android:id="@+id/choose_powers_button"
@@ -85,7 +149,7 @@
             android:gravity="center"
             android:paddingStart="10dp"
             android:paddingEnd="15dp"
-            android:text="Choose Powers"
+            android:text="@string/choose_powers"
             android:textColor="#10161D"
             android:textSize="22sp" />
 
