@@ -8,8 +8,9 @@ import android.os.Bundle;
 
 import com.farah.herome.R;
 import com.farah.herome.fragments.MainFragment;
+import com.farah.herome.fragments.PickPowerFragment;
 
-public class MainActivity extends AppCompatActivity implements MainFragment.MainFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements MainFragment.MainFragmentInteractionListener, PickPowerFragment.PickPowerInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +29,17 @@ public class MainActivity extends AppCompatActivity implements MainFragment.Main
     }
 
     public void loadPickPowerFragment() {
-
+        PickPowerFragment pickPowerFragment = new PickPowerFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, pickPowerFragment).commit();
     }
 
     @Override
     public void MainFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void pickPowerInteraction(Uri uri) {
 
     }
 }

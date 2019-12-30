@@ -5,10 +5,55 @@
     android:layout_height="match_parent"
     tools:context=".fragments.PickPowerFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:orientation="vertical"
+        android:background="@drawable/hero_bg_gradient">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pick_a_power_title"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:id="@+id/came_by_accident_button"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/hero_button"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="15dp"
+            android:weightSum="3">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:src="@drawable/lightning" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="@string/came_by_accident_btn_text"
+                android:textColor="#FAC740" />
+
+            <ImageView
+                android:id="@+id/came_by_accident_button_checkmark"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 
 </FrameLayout>

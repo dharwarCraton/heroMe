@@ -7,4 +7,5 @@
     <string name="genetic_mutation_btn_text">GENETIC MUTATION</string>
     <string name="born_with_them_btn_text">BORN WITH THEM</string>
     <string name="choose_powers">Choose Powers</string>
+    <string name="pick_a_power_title">PICK A POWER</string>
 </resources>
