@@ -155,17 +155,17 @@ public class MainFragment extends Fragment {
                     choosePowersButton.getBackground().setAlpha(255);
                     if (button == cameByAccidentButton) {
                         came_by_accident_button_checkmark.setVisibility(VISIBLE);
-                        genetic_mutation_button_checkmark.setVisibility(GONE);
-                        born_with_them_button_checkmark.setVisibility(GONE);
+                        genetic_mutation_button_checkmark.setVisibility(INVISIBLE);
+                        born_with_them_button_checkmark.setVisibility(INVISIBLE);
                     }
                     if (button == geneticMutationButton) {
-                        came_by_accident_button_checkmark.setVisibility(GONE);
+                        came_by_accident_button_checkmark.setVisibility(INVISIBLE);
                         genetic_mutation_button_checkmark.setVisibility(VISIBLE);
-                        born_with_them_button_checkmark.setVisibility(GONE);
+                        born_with_them_button_checkmark.setVisibility(INVISIBLE);
                     }
                     if (button == bornWithThemButton) {
-                        came_by_accident_button_checkmark.setVisibility(GONE);
-                        genetic_mutation_button_checkmark.setVisibility(GONE);
+                        came_by_accident_button_checkmark.setVisibility(INVISIBLE);
+                        genetic_mutation_button_checkmark.setVisibility(INVISIBLE);
                         born_with_them_button_checkmark.setVisibility(VISIBLE);
                     }
                 }
